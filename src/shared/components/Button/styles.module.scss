@@ -1,0 +1,80 @@
+.button {
+  @apply min-w-fit flex flex-row gap-2 items-center font-medium justify-center text-base px-6 border-solid cursor-pointer bg-primary  duration-300 rounded-md;
+
+  // Events
+  @apply hover:brightness-125;
+
+  &.rounded {
+    @apply rounded-full;
+  }
+}
+
+.button.color {
+  &-primary {
+    @apply bg-primary text-white border-primary;
+
+    & > svg {
+      @apply text-primary;
+    }
+  }
+
+  &-secondary {
+    @apply bg-secondary text-dark border-secondary;
+    @apply hover:brightness-110;
+
+    & > svg {
+      @apply text-dark;
+    }
+  }
+}
+
+.button.variant {
+  &-solid {
+    border-width: 1px;
+    border-color: transparent;
+  }
+
+  &-bordered {
+    border-width: 1px;
+    background-color: transparent;
+  }
+}
+
+.icon-button {
+  @apply pr-0 pl-0;
+
+  & > svg {
+    @apply block m-auto w-8 h-8;
+  }
+}
+
+.button.size {
+  &-xs {
+    @apply h-[32px] text-xs leading-3;
+
+    & > svg {
+      @apply block w-4 h-4;
+    }
+  }
+  &-sm {
+    @apply h-[40px];
+
+    & > svg {
+      @apply block w-4 h-4;
+    }
+  }
+  &-md {
+    @apply h-[46px];
+
+    & > svg {
+      @apply block w-6 h-6;
+    }
+  }
+  &-lg {
+    @apply h-[52px];
+
+    & > svg {
+      @apply block w-8 h-8;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.badge {
+  @apply inline-flex w-fit items-center px-3 text-sm py-1 rounded-md font-medium text-white;
+}
+
+.badge.color {	
+	&-primary {
+		@apply bg-primary text-white border-primary;
+
+		& > svg {
+			@apply text-white;
+		}
+	}
+
+	&-secondary {
+		@apply bg-secondary text-white border-secondary;
+
+		& > svg {
+			@apply text-white;
+		}
+	}
+	&-gold {
+		@apply bg-yellow-600 text-white border-yellow-600;
+
+		& > svg {
+			@apply text-white;
+		}
+	}
+	&-violet {
+		@apply bg-violet-600 text-white border-violet-600;
+
+		& > svg {
+			@apply text-white;
+		}
+	}
+	&-stone {
+		@apply bg-stone-700 text-white border-stone-700;
+
+		& > svg {
+			@apply text-white;
+		}
+	}
+
+}

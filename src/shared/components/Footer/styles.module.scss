@@ -1,0 +1,11 @@
+.footer{
+    @apply h-[200px] w-full bg-black text-white flex items-center justify-center mt-auto;
+}
+
+.content {
+    @apply flex max-md:px-6 items-center justify-between container;
+}
+
+.social-links nav{
+    @apply flex gap-3 items-center;
+}
