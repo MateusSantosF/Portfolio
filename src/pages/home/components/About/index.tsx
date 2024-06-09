@@ -4,7 +4,7 @@ function About() {
       <h2 className="pt-6 text-3xl font-bold" id="about">
         Sobre mim
       </h2>
-      <section className="flex flex-col md:flex-row  gap-3 md:gap-12 md:items-center md:justify-between">
+      <section className="flex flex-col md:flex-row gap-3 md:gap-12 md:items-center md:justify-between">
         <div className="md:max-w-[50%] pt-6 ">
           <p className="text-lg leading-relaxed text-balance">
             Desenvolvedor{" "}
