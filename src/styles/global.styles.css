@@ -5,8 +5,7 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: x proximity;
-  scroll-padding-top: 6vw; /* height of sticky header */
-  @apply text-dark;
+  @apply scroll-py-[12vh] lg:scroll-py-[7vh] text-dark;
 }
 
 @font-face {

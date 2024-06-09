@@ -1,12 +1,12 @@
 function About() {
   return (
-    <section className="min-h-[50lvh] px-6 pb-12">
+    <section className="min-h-[50lvh] md:px-6 pb-12">
       <h2 className="pt-6 text-3xl font-bold" id="about">
         Sobre mim
       </h2>
       <section className="flex flex-col md:flex-row gap-3 md:gap-12 md:items-center md:justify-between">
         <div className="md:max-w-[50%] pt-6 ">
-          <p className="text-lg leading-relaxed text-balance">
+          <p className="text-lg leading-relaxed">
             Desenvolvedor{" "}
             <span className="font-bold">Pleno Fullstack .NET</span> com
             experiência em
@@ -23,7 +23,7 @@ function About() {
             </span>
             , além de <span className="font-bold">chatbots</span>.
           </p>
-          <p className="text-lg leading-relaxed pt-3 text-balance">
+          <p className="text-lg leading-relaxed pt-3">
             Trabalho alinhado com{" "}
             <span className="font-bold">práticas ágeis</span> e uma forte
             aderência a <span className="font-bold">padrões de código</span>.
@@ -31,7 +31,7 @@ function About() {
             <span className="font-bold">arquitetura de software</span> e
             desafios complexos.
           </p>
-          <p className="text-lg leading-relaxed pt-3 text-balance">
+          <p className="text-lg leading-relaxed pt-3">
             Minha <span className="font-bold">missão</span> é entregar{" "}
             <span className="font-bold">
               soluções de software de alta qualidade{" "}

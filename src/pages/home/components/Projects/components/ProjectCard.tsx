@@ -12,7 +12,7 @@ function ProjectCard({ project }: { project: IProject }) {
           />
         ) : (
           <div className="w-full h-full min-h-[230px] object-cover flex justify-center items-center">
-            <h2 className="font-bold text-white text-7xl">{project.alias}</h2>
+            <h2 className="font-bold text-white text-center text-7xl">{project.alias}</h2>
           </div>
         )}
       </div>
@@ -22,11 +22,11 @@ function ProjectCard({ project }: { project: IProject }) {
         <p className="line-clamp-3">{project.shortDescription}</p>
       </div>
       {/* Card Footer */}
-      <div className="p-6 w-full flex justify-between items-center">
+      <div className="p-6 w-full flex justify-between items-center flex-wrap">
         <div className="flex gap-3 items-center">
           {project.technologies?.map(tech=>tech.icon.source)}
         </div>
-        <a className="border-2 pl-6 min-w-[50%] rounded-full p-2 flex gap-3 w-fit hover:scale-105 cursor-pointer ">
+        <a className="border-2 pl-6 min-w-[60%] rounded-full p-2 flex gap-3 w-fit hover:scale-105 cursor-pointer ">
           Ver mais →
         </a>
       </div>

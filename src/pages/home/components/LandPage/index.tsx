@@ -7,24 +7,24 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 function LandPage() {
   return (
-    <section className="h-[75vh] px-6" id="home">
+    <section className="h-[75vh] md:px-6" id="home">
       <section className="flex flex-1 flex-wrap-reverse lg:flex-nowrap lg:items-center gap-6 h-full">
         <div className="flex w-full lg:items-start items-center flex-col gap-6">
           <Badge color="stone" value="Mateus Ferreira" />
-          <h1 className="font-bold  text-5xl lg:text-6xl text-center md:text-left">
+          <h1 className="font-bold  text-3xl md:text-5xl lg:text-6xl text-center md:text-left">
             Desenvolvedor <span className="text-violet-700">.NET</span>
           </h1>
 
-          <p className="text-md text-gray-500 -mt-3">
+          <p className="text-md text-gray-500 -mt-3 text-center">
             CSharp | Python | Next.js | NodeJS | Azure Devops
           </p>
           <div className="flex gap-3">
             <HashLink href="#projects">
-              <Button>Meus projetos</Button>
+              <Button>Projetos</Button>
             </HashLink>
             <Button color="secondary">Baixar CV</Button>
           </div>
-          <div className="flex w-full md:w-min items-center justify-center gap-3">
+          <div className="flex w-full md:w-min items-center justify-center gap-3 pb-3">
             <Link target="_blank" to={SocialMediasURLs.linkedin}>
               <div className="rounded-full cursor-pointer p-3 shadow-md hover:bg-gray-50 hover:shadow-xl">
                 <FiLinkedin />

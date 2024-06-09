@@ -4,7 +4,7 @@ import { projects } from "@/shared/data/projects";
 
 function Projects() {
   return (
-    <section className="min-h-[70lvh] px-6" id="projects">
+    <section className="min-h-[70lvh] md:px-6" id="projects">
       <Divider maxWidth={"30%"} />
       <h2 className="pt-6 text-3xl font-bold">Projetos</h2>
 
