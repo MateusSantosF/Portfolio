@@ -4,6 +4,7 @@ import Button from "@shared/components/Button";
 import HashLink from "@shared/components/HashLink";
 import Link from "@shared/components/Link";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { GrDocumentDownload } from "react-icons/gr";
 
 function LandPage() {
   return (
@@ -22,7 +23,10 @@ function LandPage() {
             <HashLink href="#projects">
               <Button>Projetos</Button>
             </HashLink>
-            <Button color="secondary">Baixar CV</Button>
+            <Button color="secondary">
+              <GrDocumentDownload />
+              Baixar CV
+            </Button>
           </div>
           <div className="flex w-full md:w-min items-center justify-center gap-3 pb-3">
             <Link target="_blank" to={SocialMediasURLs.linkedin}>
