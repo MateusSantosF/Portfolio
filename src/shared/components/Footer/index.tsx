@@ -1,3 +1,4 @@
+import { SocialMediasURLs } from "@/shared/Constants/social-media";
 import sytles from "./styles.module.scss";
 
 function Footer() {
@@ -7,14 +8,11 @@ function Footer() {
         <div>&copy; All rights reserved.</div>
         <div className={sytles["social-links"]}>
           <nav>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/mateusferreira-dev/"
-            >
+            <a target="_blank" href={SocialMediasURLs.linkedin}>
               Linkedin
             </a>
-            /
-            <a target="_blank" href="https://github.com/MateusSantosF">
+            |
+            <a target="_blank" href={SocialMediasURLs.github}>
               GitHub
             </a>
           </nav>

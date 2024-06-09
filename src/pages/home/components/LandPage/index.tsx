@@ -1,3 +1,4 @@
+import { SocialMediasURLs } from "@/shared/Constants/social-media";
 import Badge from "@shared/components/Badge";
 import Button from "@shared/components/Button";
 import HashLink from "@shared/components/HashLink";
@@ -15,22 +16,21 @@ function LandPage() {
           </h1>
 
           <p className="text-md text-gray-500 -mt-3">
-            Python | CSharp |  Next.js | NodeJS |  Azure Devops
+            CSharp | Python | Next.js | NodeJS | Azure Devops
           </p>
           <div className="flex gap-3">
-            <HashLink href="#projects"><Button>Meus projetos</Button></HashLink>
+            <HashLink href="#projects">
+              <Button>Meus projetos</Button>
+            </HashLink>
             <Button color="secondary">Baixar CV</Button>
           </div>
           <div className="flex w-full md:w-min items-center justify-center gap-3">
-            <Link
-              target="_blank"
-              to={"https://www.linkedin.com/in/mateusferreira-dev/"}
-            >
+            <Link target="_blank" to={SocialMediasURLs.linkedin}>
               <div className="rounded-full cursor-pointer p-3 shadow-md hover:bg-gray-50 hover:shadow-xl">
                 <FiLinkedin />
               </div>
             </Link>
-            <Link target="_blank" to={"https://github.com/MateusSantosF"}>
+            <Link target="_blank" to={SocialMediasURLs.github}>
               <div className="rounded-full cursor-pointer  p-3 shadow-md hover:bg-gray-50 hover:shadow-xl">
                 <FiGithub />
               </div>
