@@ -4,7 +4,7 @@ function About() {
       <h2 className="pt-6 text-3xl font-bold" id="about">
         Sobre mim
       </h2>
-      <section className="flex justify-between">
+      <section className="flex flex-col md:flex-row  gap-3 md:gap-12 md:items-center md:justify-between">
         <div className="md:max-w-[50%] pt-6 ">
           <p className="text-lg leading-relaxed text-balance">
             Desenvolvedor{" "}
@@ -40,12 +40,13 @@ function About() {
             <span className="font-bold">empresas e clientes</span> para
             aprimorar seus processos de desenvolvimento e ferramentas.
           </p>
-          <blockquote className="pt-6 text-sm italic">
+      
+        </div>
+        <blockquote className="pt-6 text-sm md:text-2xl italic">
             "O único limite para a nossa compreensão de amanhã são as nossas
             dúvidas de hoje."
             <cite>— Franklin D. Roosevelt </cite>
           </blockquote>
-        </div>
       </section>
     </section>
   );
