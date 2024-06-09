@@ -2,9 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
-    scroll-behavior: smooth;
-    scroll-snap-type: x proximity;
-    @apply text-dark;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  scroll-padding-top: 6vw; /* height of sticky header */
+  @apply text-dark;
 }
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype"),
+    url("../fonts/Poppins-Bold.ttf") format("truetype"),
+    url("../fonts/Poppins-Medium.ttf") format("truetype"),
+    url("../fonts/Poppins-Light.ttf") format("truetype"),
+    url("../fonts/Poppins-Thin.ttf") format("truetype");
+}
+
+html, body, div, button, p, span, nav, ul, a {
+	font-family: "Poppins";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Poppins";
+}
+
