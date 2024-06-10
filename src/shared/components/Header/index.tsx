@@ -100,8 +100,7 @@ function Header() {
 
         <a
           className={"hidden  lg:flex"}
-          href="/assets/
-        CURRICULO_MATEUS_FERREIRA.pdf"
+          href="/assets/CURRICULO_MATEUS_FERREIRA.pdf"
           download
         >
           <Button size="sm" color="secondary" variant="solid">
