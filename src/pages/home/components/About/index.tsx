@@ -16,7 +16,7 @@ function About() {
               {" "}
               CSharp, TypeScript
             </span>
-            e serviços em nuvem do <span className="font-bold">Azure</span>. Focado na construção de soluções
+            {" "}e serviços em nuvem do <span className="font-bold">Azure</span>. Focado na construção de soluções
             robustas e eficientes para a web. Possuo uma sólida formação em{" "}
             <span className="font-bold">Ciência da Computação</span> e tenho um
             histórico de sucesso no desenvolvimento de{" "}
