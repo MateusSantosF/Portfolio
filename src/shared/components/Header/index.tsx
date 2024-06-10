@@ -98,15 +98,17 @@ function Header() {
           </nav>
         </div>
 
-        <Button
-          size="sm"
-          color="secondary"
-          variant="solid"
-          className={"hidden  lg:flex"}
-        >
-          <GrDocumentDownload />
-          Baixar CV
-        </Button>
+        <a href="/assets/CURRICULO_MATEUS_FERREIRA.pdf" download>
+          <Button
+            size="sm"
+            color="secondary"
+            variant="solid"
+            className={"hidden  lg:flex"}
+          >
+            <GrDocumentDownload />
+            Baixar CV
+          </Button>
+        </a>
       </div>
     </header>
   );

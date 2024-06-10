@@ -23,10 +23,12 @@ function LandPage() {
             <HashLink href="#projects">
               <Button>Projetos</Button>
             </HashLink>
-            <Button color="secondary">
-              <GrDocumentDownload />
-              Baixar CV
-            </Button>
+            <a href="/assets/CURRICULO_MATEUS_FERREIRA.pdf" download>
+              <Button color="secondary">
+                <GrDocumentDownload />
+                Baixar CV
+              </Button>
+            </a>
           </div>
           <div className="flex w-full md:w-min items-center justify-center gap-3 pb-3">
             <Link target="_blank" to={SocialMediasURLs.linkedin}>
