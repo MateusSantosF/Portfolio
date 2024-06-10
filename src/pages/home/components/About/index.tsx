@@ -6,8 +6,8 @@ function About() {
       <h2 className="pt-6 text-3xl font-bold" id="about">
         Sobre mim
       </h2>
-      <section className="flex flex-col md:flex-row gap-3 md:gap-12 md:items-center md:justify-between">
-        <div className="md:max-w-[50%] pt-6 ">
+      <section className="flex flex-col lg:flex-row gap-3 md:gap-12 md:items-center justify-between">
+        <div className="flex-1 min-w-[50%] pt-6 ">
           <p className="text-lg leading-relaxed">
             Desenvolvedor{" "}
             <span className="font-bold">Pleno Fullstack .NET</span> na <Link className="font-bold italic text-gray-700" to="https://bnpsolucoes.com.br/">BNP Soluções em TI</Link>, com
@@ -44,7 +44,7 @@ function About() {
           </p>
       
         </div>
-        <blockquote className="pt-6 text-sm md:text-2xl italic px-12">
+        <blockquote className="flex-1 pt-6 text-sm md:text-2xl italic px-12">
             "O único limite para a nossa compreensão de amanhã são as nossas
             dúvidas de hoje."
             <cite>— Franklin D. Roosevelt </cite>

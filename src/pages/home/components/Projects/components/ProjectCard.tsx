@@ -2,7 +2,7 @@ import { IProject } from "../../../../../shared/interfaces/Project";
 
 function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div className="rounded-2xl h-full shadow-lg hover:shadow-2xl lg:max-w-[30%]">
+    <div className="rounded-2xl flex-grow h-full shadow-lg hover:shadow-2xl lg:max-w-[30%]">
       {/* Card Header */}
       <div className="w-full h-full max-h-[230px] bg-dark rounded-2xl">
         {project.image ? (
@@ -19,7 +19,7 @@ function ProjectCard({ project }: { project: IProject }) {
       {/* Card Body */}
       <div className="w-full p-6">
         <h2 className="font-bold text-xl py-3">{project.name}</h2>
-        <p className="line-clamp-3">{project.shortDescription}</p>
+        <p className="line-clamp-2">{project.shortDescription}</p>
       </div>
       {/* Card Footer */}
       <div className="p-6 w-full flex justify-between items-center flex-wrap">
