@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function About() {
   return (
     <section className="min-h-[50lvh] md:px-6 pb-12">
@@ -8,24 +10,24 @@ function About() {
         <div className="md:max-w-[50%] pt-6 ">
           <p className="text-lg leading-relaxed">
             Desenvolvedor{" "}
-            <span className="font-bold">Pleno Fullstack .NET</span> com
-            experiência em
+            <span className="font-bold">Pleno Fullstack .NET</span> na <Link className="font-bold italic text-gray-700" to="https://bnpsolucoes.com.br/">BNP Soluções em TI</Link>, com
+            ampla experiência em
             <span className="font-bold">
               {" "}
-              Next.js, TypeScript, Node.js, Python
+              CSharp, TypeScript
             </span>
-            , e uma gama de ferramentas Azure, focado na construção de soluções
+            e serviços em nuvem do <span className="font-bold">Azure</span>. Focado na construção de soluções
             robustas e eficientes para a web. Possuo uma sólida formação em{" "}
             <span className="font-bold">Ciência da Computação</span> e tenho um
             histórico de sucesso no desenvolvimento de{" "}
             <span className="font-bold">
-              APIs REST, Websites com foco em acessibilidade e observabilidade
+              APIs, Websites com foco em acessibilidade e observabilidade
             </span>
             , além de <span className="font-bold">chatbots</span>.
           </p>
           <p className="text-lg leading-relaxed pt-3">
             Trabalho alinhado com{" "}
-            <span className="font-bold">práticas ágeis</span> e uma forte
+            <span className="font-bold">práticas ágeis</span> e tenho uma forte
             aderência a <span className="font-bold">padrões de código</span>.
             Comunicador eficaz e organizado, tenho interesse em{" "}
             <span className="font-bold">arquitetura de software</span> e
@@ -42,7 +44,7 @@ function About() {
           </p>
       
         </div>
-        <blockquote className="pt-6 text-sm md:text-2xl italic">
+        <blockquote className="pt-6 text-sm md:text-2xl italic px-12">
             "O único limite para a nossa compreensão de amanhã são as nossas
             dúvidas de hoje."
             <cite>— Franklin D. Roosevelt </cite>
