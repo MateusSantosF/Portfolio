@@ -3,9 +3,5 @@
 }
 
 .content {
-    @apply flex max-md:px-6 items-center justify-between container;
-}
-
-.social-links nav{
-    @apply flex gap-3 items-center;
+    @apply flex items-center container justify-center;
 }

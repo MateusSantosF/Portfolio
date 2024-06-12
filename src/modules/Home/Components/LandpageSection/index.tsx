@@ -1,4 +1,5 @@
 import { SocialMediasURLs } from "@/shared/Constants/social-media";
+import { useGoogleAnalytics } from "@/shared/hooks/useGoogleAnalytics";
 import Badge from "@shared/components/Badge";
 import Button from "@shared/components/Button";
 import HashLink from "@shared/components/HashLink";
@@ -7,6 +8,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { GrDocumentDownload } from "react-icons/gr";
 
 function LandPage() {
+  const { triggerEvent } = useGoogleAnalytics();
   return (
     <section className="h-[75vh] md:px-6" id="home">
       <section className="flex flex-1 flex-wrap-reverse lg:flex-nowrap lg:items-center gap-6 h-full">
@@ -23,7 +25,13 @@ function LandPage() {
             <HashLink href="#projects">
               <Button>Projetos</Button>
             </HashLink>
-            <a href="/assets/CURRICULO_MATEUS_FERREIRA.pdf" download>
+            <a
+              href="/assets/CURRICULO_MATEUS_FERREIRA.pdf"
+              download
+              onClick={() => {
+                triggerEvent("CV_DOWNLOAD", {});
+              }}
+            >
               <Button color="secondary">
                 <GrDocumentDownload />
                 Baixar CV

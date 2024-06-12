@@ -4,9 +4,11 @@ import HashLink from "../HashLink";
 import { GrDocumentDownload } from "react-icons/gr";
 import { MdClose } from "react-icons/md";
 import styles from "./styles.module.scss";
+import { useGoogleAnalytics } from "@/shared/hooks/useGoogleAnalytics";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { triggerEvent } = useGoogleAnalytics();
   const headerRef = useRef<ElementRef<"div">>(null);
 
   const hideMobileMenu = () => {
@@ -100,6 +102,9 @@ function Header() {
 
         <a
           className={"hidden  lg:flex"}
+          onClick={() => {
+            triggerEvent("CV_DOWNLOAD", {});
+          }}
           href="/assets/CURRICULO_MATEUS_FERREIRA.pdf"
           download
         >

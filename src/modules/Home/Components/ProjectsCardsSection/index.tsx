@@ -1,6 +1,6 @@
 import Divider from "@shared/components/Divider";
-import ProjectCard from "./components/ProjectCard";
 import { projects } from "@/shared/data/projects";
+import ProjectCard from "../ProjectCard";
 
 function Projects() {
   return (
@@ -10,7 +10,7 @@ function Projects() {
 
       <ul className="pt-12 flex gap-12 justify-around flex-wrap">
         {projects.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard key={project.name} project={project} />
         ))}
       </ul>
     </section>

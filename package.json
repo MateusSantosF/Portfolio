@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/google.analytics": "^0.0.46",
     "clsx": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

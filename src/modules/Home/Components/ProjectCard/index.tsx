@@ -1,10 +1,11 @@
-import { IProject } from "../../../../../shared/interfaces/Project";
+import { IProject } from "@/shared/interfaces/Project";
+import { Fragment } from "react/jsx-runtime";
 
 function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div className="rounded-2xl flex-grow h-full shadow-lg hover:shadow-2xl lg:max-w-[30%]">
+    <div className="rounded-t-2xl rounded-r-2xl flex-grow h-full shadow-lg hover:shadow-2xl lg:max-w-[30%]">
       {/* Card Header */}
-      <div className="w-full h-full max-h-[230px] bg-dark rounded-2xl">
+      <div className="w-full h-full max-h-[230px] bg-dark rounded-t-2xl ">
         {project.image ? (
           <img
             className="w-full rounded-lg max-h-[230px] object-cover"
@@ -24,7 +25,7 @@ function ProjectCard({ project }: { project: IProject }) {
       {/* Card Footer */}
       <div className="p-6 w-full flex justify-between items-center flex-wrap">
         <div className="flex gap-3 items-center">
-          {project.technologies?.map(tech=>tech.icon.source)}
+          {project.technologies?.map((tech, i)=> <Fragment key={i}>{tech.icon.source}</Fragment>)}
         </div>
         <a className="border-2 pl-6 min-w-[60%] rounded-full p-2 flex gap-3 w-fit hover:scale-105 cursor-pointer ">
           Ver mais →
