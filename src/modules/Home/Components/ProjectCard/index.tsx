@@ -1,5 +1,6 @@
 import { useGoogleAnalytics } from "@/shared/hooks/useGoogleAnalytics";
 import { IProject } from "@/shared/interfaces/Project";
+import { Link } from "react-router-dom";
 import { Fragment } from "react/jsx-runtime";
 
 function ProjectCard({ project }: { project: IProject }) {
@@ -29,18 +30,19 @@ function ProjectCard({ project }: { project: IProject }) {
       {/* Card Footer */}
       <div className="p-6 w-full flex justify-between items-center flex-wrap">
         <div className="flex gap-3 items-center">
-          {project.technologies?.map((tech, i) => (
+          {project.technologies?.slice(0, 2).map((tech, i) => (
             <Fragment key={i}>{tech.icon.source}</Fragment>
           ))}
         </div>
-        <a
+        <Link
+          to={`/projeto/${project.id}`}
           className="border-2 pl-6 min-w-[60%] rounded-full p-2 flex gap-3 w-fit hover:scale-105 cursor-pointer"
           onClick={() => {
             triggerEvent("PROJECT_CARD_CLICK", { projectName: project.name });
           }}
         >
           Ver mais →
-        </a>
+        </Link>
       </div>
     </div>
   );

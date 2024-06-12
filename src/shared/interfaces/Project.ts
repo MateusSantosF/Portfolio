@@ -1,13 +1,14 @@
 import { ReactElement } from "react";
 
 export interface IProject {
+  id: string;
   name: string;
-  alias?: string;
-  image?: string;
+  logo?: string;
   shortDescription: string;
   fullDescription: string;
+  alias?: string;
+  image?: string;
   url?: string;
-  detailsUrl?: string;
   github?: string;
   images?: Array<{ title?: string; url: string }>;
   technologies?: Array<ITechnologie>;

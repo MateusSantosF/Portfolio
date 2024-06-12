@@ -5,6 +5,7 @@ import { GrDocumentDownload } from "react-icons/gr";
 import { MdClose } from "react-icons/md";
 import styles from "./styles.module.scss";
 import { useGoogleAnalytics } from "@/shared/hooks/useGoogleAnalytics";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,9 +42,11 @@ function Header() {
   return (
     <header className={styles["header"]} ref={headerRef}>
       <div className="flex px-6 items-center justify-between container">
-        <h2 className="font-bold text-xl">
-          <span className="text-2xl">F</span>erreira
-        </h2>
+        <a href="/">
+          <h2 className="font-bold text-xl">
+            <span className="text-2xl">F</span>erreira
+          </h2>
+        </a>
         <section className="MOBILE-MENU flex lg:hidden">
           <div
             className="space-y-2 cursor-pointer"
@@ -65,19 +68,19 @@ function Header() {
               <ul>
                 <ul className="flex flex-col text-2xl gap-3 items-center font-light">
                   <li>
-                    <HashLink href="#home" onClick={hideMobileMenu}>
+                    <Link to="/#home" onClick={hideMobileMenu}>
                       Inicio
-                    </HashLink>
+                    </Link>
                   </li>
                   <li>
-                    <HashLink href="#projects" onClick={hideMobileMenu}>
+                    <Link to="/#projects" onClick={hideMobileMenu}>
                       Projetos
-                    </HashLink>
+                    </Link>
                   </li>
                   <li>
-                    <HashLink href="#about" onClick={hideMobileMenu}>
+                    <Link to="/#about" onClick={hideMobileMenu}>
                       Sobre
-                    </HashLink>
+                    </Link>
                   </li>
                 </ul>
               </ul>
@@ -88,13 +91,13 @@ function Header() {
           <nav>
             <ul className="flex gap-3 items-center font-light">
               <li>
-                <HashLink href="#home">Inicio</HashLink>
+                <HashLink href="/#home">Inicio</HashLink>
               </li>
               <li>
-                <HashLink href="#projects">Projetos</HashLink>
+                <HashLink href="/#projects">Projetos</HashLink>
               </li>
               <li>
-                <HashLink href="#about">Sobre</HashLink>
+                <HashLink href="/#about">Sobre</HashLink>
               </li>
             </ul>
           </nav>
