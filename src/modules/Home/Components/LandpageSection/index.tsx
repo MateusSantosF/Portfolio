@@ -39,12 +39,24 @@ function LandPage() {
             </a>
           </div>
           <div className="flex w-full md:w-min items-center justify-center gap-3 pb-3">
-            <Link target="_blank" to={SocialMediasURLs.linkedin}>
+            <Link
+              target="_blank"
+              to={SocialMediasURLs.linkedin}
+              onClick={() => {
+                triggerEvent("LINKEDIN_REDIRECT", {});
+              }}
+            >
               <div className="rounded-full cursor-pointer p-3 shadow-md hover:bg-gray-50 hover:shadow-xl">
                 <FiLinkedin />
               </div>
             </Link>
-            <Link target="_blank" to={SocialMediasURLs.github}>
+            <Link
+              target="_blank"
+              to={SocialMediasURLs.github}
+              onClick={() => {
+                triggerEvent("GITHUB_REDIRECT", {});
+              }}
+            >
               <div className="rounded-full cursor-pointer  p-3 shadow-md hover:bg-gray-50 hover:shadow-xl">
                 <FiGithub />
               </div>

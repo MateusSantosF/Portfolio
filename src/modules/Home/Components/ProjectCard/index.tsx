@@ -1,7 +1,9 @@
+import { useGoogleAnalytics } from "@/shared/hooks/useGoogleAnalytics";
 import { IProject } from "@/shared/interfaces/Project";
 import { Fragment } from "react/jsx-runtime";
 
 function ProjectCard({ project }: { project: IProject }) {
+  const { triggerEvent } = useGoogleAnalytics();
   return (
     <div className="rounded-t-2xl rounded-r-2xl flex-grow h-full shadow-lg hover:shadow-2xl lg:max-w-[30%]">
       {/* Card Header */}
@@ -13,7 +15,9 @@ function ProjectCard({ project }: { project: IProject }) {
           />
         ) : (
           <div className="w-full h-full min-h-[230px] object-cover flex justify-center items-center">
-            <h2 className="font-bold text-white text-center text-7xl">{project.alias}</h2>
+            <h2 className="font-bold text-white text-center text-7xl">
+              {project.alias}
+            </h2>
           </div>
         )}
       </div>
@@ -25,9 +29,16 @@ function ProjectCard({ project }: { project: IProject }) {
       {/* Card Footer */}
       <div className="p-6 w-full flex justify-between items-center flex-wrap">
         <div className="flex gap-3 items-center">
-          {project.technologies?.map((tech, i)=> <Fragment key={i}>{tech.icon.source}</Fragment>)}
+          {project.technologies?.map((tech, i) => (
+            <Fragment key={i}>{tech.icon.source}</Fragment>
+          ))}
         </div>
-        <a className="border-2 pl-6 min-w-[60%] rounded-full p-2 flex gap-3 w-fit hover:scale-105 cursor-pointer ">
+        <a
+          className="border-2 pl-6 min-w-[60%] rounded-full p-2 flex gap-3 w-fit hover:scale-105 cursor-pointer"
+          onClick={() => {
+            triggerEvent("PROJECT_CARD_CLICK", { projectName: project.name });
+          }}
+        >
           Ver mais →
         </a>
       </div>
